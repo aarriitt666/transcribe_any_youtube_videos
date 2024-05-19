@@ -34,7 +34,7 @@ This repository provides a simple Streamlit application to download audio from Y
    pip install -r requirements.txt
    ```
 
-   or you can just do:
+   or you can just do because the requirements.txt got ndvidia cuda stuff that are specific to my machine:
 
    ```bash
    pip install streamlit yt-dlp git+https://github.com/openai/whisper.git setuptools-rust ffmpeg-python
@@ -47,6 +47,7 @@ This repository provides a simple Streamlit application to download audio from Y
    yt-dlp
    openai-whisper
    ffmpeg-python
+   setuptools-rust
    ```
 
 4. **Run the Streamlit application**:
