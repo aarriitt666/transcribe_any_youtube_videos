@@ -1,34 +1,5 @@
 # Ignore environment files
 .env
 env
-
-# Ignore text files
-*.txt
-
-# Ignore audio files
-*.m4a
-*.mp3
-
-# Ignore image files
-*.jpg
-*.jpeg
-*.png
-*.gif
-*.bmp
-*.tiff
-
-# Ignore video files
-*.mp4
-*.mkv
-*.avi
-*.mov
-*.wmv
-
-# Ignore other media files
-*.wav
-*.flac
-*.ogg
-*.webm
-
 # Ignore directories typically used for media
-media/
+workspace/

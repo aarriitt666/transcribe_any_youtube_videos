@@ -9,11 +9,19 @@ def sanitize_filename(filename):
     """Sanitize the filename to remove or replace unsafe characters."""
     return re.sub(r'[\\/*?:"<>|]', "", filename)
 
+def ensure_workspace():
+    """Ensure the workspace directory exists."""
+    workspace_dir = os.path.join(os.getcwd(), "workspace")
+    if not os.path.exists(workspace_dir):
+        os.makedirs(workspace_dir)
+    return workspace_dir
+
 def download_video(url):
     """Download a YouTube video and return the title and filename."""
+    workspace_dir = ensure_workspace()
     options = {
         'format': 'bestaudio/best',
-        'outtmpl': '%(title)s.%(ext)s',
+        'outtmpl': os.path.join(workspace_dir, '%(title)s.%(ext)s'),
         'postprocessors': [{
             'key': 'FFmpegExtractAudio',
             'preferredcodec': 'm4a',
@@ -69,8 +77,8 @@ st.write("Upload an .m4a file to transcribe it to text using OpenAI's Whisper mo
 uploaded_file = st.file_uploader("Choose an .m4a file", type="m4a")
 
 if uploaded_file is not None:
-    # Save the uploaded file to a temporary location
-    temp_filename = os.path.join(os.getcwd(), uploaded_file.name)
+    workspace_dir = ensure_workspace()
+    temp_filename = os.path.join(workspace_dir, uploaded_file.name)
     with open(temp_filename, "wb") as f:
         f.write(uploaded_file.getbuffer())
     st.write(f"Uploaded file saved as: {temp_filename}")
