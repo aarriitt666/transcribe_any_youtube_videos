@@ -10,11 +10,7 @@ This repository provides a simple Streamlit application to download audio from Y
 
 ## Requirements
 
-- Python 3.6+
-- Streamlit
-- yt-dlp
-- Whisper
-- FFmpeg
+- Python 3.10+
 
 ## Installation
 
@@ -36,6 +32,12 @@ This repository provides a simple Streamlit application to download audio from Y
 
    ```bash
    pip install -r requirements.txt
+   ```
+
+   or you can just do:
+
+   ```bash
+   pip install streamlit yt-dlp git+https://github.com/openai/whisper.git setuptools-rust ffmpeg-python
    ```
 
    **requirements.txt**:
