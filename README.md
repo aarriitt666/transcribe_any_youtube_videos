@@ -151,11 +151,3 @@ If you have suggestions for improving this project, please feel free to submit a
 
 License
 This project is licensed under the MIT License. See the LICENSE file for details.
-
-### Instructions:
-
-1. **Create a `README.md` file** in the root of your project directory.
-2. **Copy and paste the above content** into the `README.md` file.
-3. **Save the file**.
-
-This `README.md` provides a comprehensive guide for users to understand, set up, and run your project, complete with installation instructions, usage guidelines, and the core code.
